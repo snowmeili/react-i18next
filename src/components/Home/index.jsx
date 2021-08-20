@@ -1,23 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import useIntl from '../../hooks/intl';
 
-import { withTranslation  } from "react-i18next";
+//import { withTranslation  } from "react-i18next";
 
-//类式组件
-
-//  class Home extends Component {
-//   render() {
-//     const {t} = this.props
-
-//     return (
-//       <div>
-//            <h3>{t("home.content")}</h3>
-//       </div>
-//     )
-//   }
-// }
-
-//函数式组件
-const Home = ({t})=>{
+const Home = ()=>{
+  console.log(useIntl,999)
+  const t = useIntl();
   return (
     <div>
          <h3>{t("home.content")}</h3>
@@ -25,4 +13,5 @@ const Home = ({t})=>{
   )
 }
 
-export default withTranslation()(Home)
+//export default withTranslation()(Home);
+export default Home;

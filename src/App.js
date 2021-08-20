@@ -45,19 +45,10 @@ function App() {
              <option value="en-US">英</option>
            </select>
         </div>
-        <ul className="nav">
-          <li>
-              <NavLink to="/home">{t('home.title')}</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">{t('about.title')}</NavLink>
-          </li>
-        </ul>
         <div className="routes">
            <Redirect path="/" to="/home" /> 
            <Route path="/home" component={Home}></Route>
            <Route path="/about" component={About}></Route>
-           
         </div>
       </Router>
     </div>
